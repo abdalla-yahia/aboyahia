@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@layer theme {
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --highlight: #f7dc6f;
+  --shadow: #000000;
+  --text: #171717;
+  --text-alt: #f7dc6f;
+  --text-alt-2: #171717;
+  --text-alt-3: #f7dc6f;
+}
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+@layer utilities {
+    .bg-background-main{
+    background-color: var(--background);
+    }
+    .bg-foreground-main{
+    background-color: var(--foreground);
+    }
+    .highlight-main{
+    background-color: var(--highlight);
+    }
+    .shadow-main{
+    background-color: var(--shadow);
+    }
+    .text-main{
+    color: var(--text);
+    }
+    .text-alt-main{
+    color: var(--text-alt);
+    }
+    
+  }
+
+  /* @layer components {
+    .card {
+      @apply bg-background-main p-4 rounded-lg shadow-main;
+      @apply text-main;
+      }
+      .card-alt {
+        @apply bg-foreground-main p-4 rounded-lg shadow-main;
+        @apply text-alt-main;
+        }
+        .card-highlight {
+          @apply bg-highlight-main p-4 rounded-lg shadow-main;
+          @apply text-main;
+          }
+          .card-alt-highlight {
+            @apply bg-foreground-main p-4 rounded-lg shadow-main;
+            @apply text-alt-main;
+            }
+            .card-shadow {
+              @apply bg-shadow-main p-4 rounded-lg shadow-main;
+              @apply text-main;
+              }
+              .card-alt-shadow {
+                @apply bg-foreground-main p-4 rounded-lg shadow-main;
+                @apply text-alt-main;
+                }
+    } */
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --highlight: #f7dc6f;
+    --shadow: #000000;
+    --text: #ededed;
+    --text-alt: #f7dc6f;
+    --text-alt-2: #ededed;
+    --text-alt-3: #f7dc6f;
+    
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
